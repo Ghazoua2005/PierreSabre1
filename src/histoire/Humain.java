@@ -9,17 +9,17 @@ public class Humain {
 		super();
 		this.nom = nom;
 		this.boisson = boisson;
-		this.argent = argent;
+		this.setArgent(argent);
 
 	}
 
 	public void gagnerArgent(int gain) {
-		argent += gain;
+		setArgent(getArgent() + gain);
 
 	}
 
 	public void perdreArgent(int perte) {
-		argent -= perte;
+		setArgent(getArgent() - perte);
 
 	}
 
@@ -46,13 +46,21 @@ public class Humain {
 	}
 
 	public void acheter(String bien, int prix) {
-		if (prix <= argent) {
+		if (prix <= getArgent()) {
 			perdreArgent(prix);
 			parler("J’ai acheté " + bien + " pour " + prix + " euros.");
 		} else {
 			parler("Je n’ai pas assez d’argent pour acheter " + bien + "...");
 		}
 
+	}
+
+	public int getArgent() {
+		return argent;
+	}
+
+	public void setArgent(int argent) {
+		this.argent = argent;
 	}
 
 }

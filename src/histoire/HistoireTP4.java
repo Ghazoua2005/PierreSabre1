@@ -8,6 +8,11 @@ public class HistoireTP4 {
 		prof.boire();
 		prof.parler("J'ai 42 sous en poche. Je vais pouvoir m'offrir un jeu à 2 sous");
 		prof.parler("Je n'ai plus que 40 sous en poche. Je ne peux même pas m'offrir un kimono à 50 sous");
+		Commercant marco = new Commercant("Marco", 20);
+		marco.direBonjour();
+		marco.seFaireExtorquer();
+		marco.parler("15 sous ! Je te remercie généreux donateur!");
+		marco.boire();
 
 	}
 
